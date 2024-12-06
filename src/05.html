@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+
+<body>
+    <form action="" id="formBox">
+        <div class="checkBoxs">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        </div>
+        <div class="choice">
+            <button class="all">全选</button>
+            <button class="no">不选</button>
+            <button class="reve">反选</button>
+        </div>
+    </form>
+    <script>
+        let checkBoxs = document.querySelector('.checkBoxs')
+        let inputs = document.querySelectorAll('input')
+        // let inputs = checkBoxs.children
+        console.log(inputs);
+        let allBtn = document.querySelector('.all')
+        console.log(allBtn);
+        let noBtn = document.querySelector('.no')
+        let reveBtn = document.querySelector('.reve')
+        allBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            inputs.forEach((ele) => {
+                ele.checked = true
+            });
+        }
+        )
+        noBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            inputs.forEach((ele) => {
+                ele.checked = false
+            });
+        }
+        )
+        reveBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            inputs.forEach((ele) => {
+                ele.checked = !ele.checked
+            });
+        }
+        )
+
+
+    </script>
+</body>
+
+</html>

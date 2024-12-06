@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+    <style>
+        .box {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .iconRight {
+            width: 30px;
+            height: 30px;
+            background: url(images/right.png) no-repeat center center;
+        }
+
+        .iconWrong {
+            width: 30px;
+            height: 30px;
+            background: url(images/wrong.png) no-repeat center center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="box">
+        设置密码：<input id="psd" type="password"> <span class="icon"></span> <em class="text"></em>
+    </form>
+    <script>
+        let box = document.querySelector('.box')
+        let inputPsd = document.getElementById('psd')
+        let icon = document.querySelector('.icon')
+        let text = document.querySelector('.text')
+        inputPsd.addEventListener('blur', function () {
+            let len = inputPsd.value.length
+            if (len < 6 || len > 16) {
+                icon.className = 'iconWrong'
+                text.innerText = '密码输入错误'
+            } else {
+                icon.className = 'iconRight'
+                text.innerText = '密码输入正确'
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+    <style>
+        #spirit {
+            padding: 0;
+            width: 360px;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            width: 90px;
+            height: 40px;
+            background: url(images/sprite.png) no-repeat center center;
+            background-position: 25px -44px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="spirit">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        let spirit = document.getElementById('spirit')
+        let liNodes = spirit.children
+        console.log(liNodes);
+        for (let i = 0; i < liNodes.length; i++) {
+            liNodes[i].style = `background-position: 25px -${i * 44}px;`
+        }
+    </script>
+</body>
+
+</html>

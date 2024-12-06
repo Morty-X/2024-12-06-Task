@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+    <style>
+        .taobao {
+            position: relative;
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .taobao img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .err {
+            position: absolute;
+            top: 0px;
+            left: -50px;
+            text-align: center;
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            color: #ccc;
+            border: 1px solid #666;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taobao">
+        <div class="err">X</div>
+        <img src="images/tao.png" alt="">
+    </div>
+    <script>
+        let taobao = document.querySelector('.taobao')
+        let err = document.querySelector('.err')
+        err.addEventListener('click', function () {
+            taobao.style.display = 'none'
+        })
+
+    </script>
+</body>
+
+</html>
